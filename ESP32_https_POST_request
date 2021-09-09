@@ -1,11 +1,7 @@
-
 #include <Arduino.h>
-
 #include <WiFi.h>
 #include <WiFiMulti.h>
-
 #include <HTTPClient.h>
-
 #include <WiFiClientSecure.h>
 
 
@@ -69,13 +65,13 @@ void loop() {
       if (https.begin(*client, "https://www.yourWebsiteHere.com/esp32postRequest.php")) {  // HTTPS
         
         /*start POST*/
-        https.addHeader("Content-Type", "application/x-www-form-urlencoded");             //Specify content-type, is it was a GET request it would be  "text/plain"
-        int httpResponseCode = https.POST("temp=20&tempF=68");   //Send the actual POST request, for example send Temperature in C° and in F°
+        https.addHeader("Content-Type", "application/x-www-form-urlencoded");             //Specify content-type, in the case it was a GET request it would be  "text/plain"
+        int httpResponseCode = https.POST("temp=20&tempF=68");                            //Send the actual POST request, for example send Temperature both in C° and in F°
         
          if(httpResponseCode>0){
            String response = https.getString();                       //Get the response to the request
-           Serial.println(httpResponseCode);   //Print return code
-           Serial.println(response);           //Print request answer
+           Serial.println(httpResponseCode);                          //Print return code
+           Serial.println(response);                                  //Print request answer
          }else{
             Serial.print("Error on sending POST: ");
             Serial.println(httpResponseCode);         
@@ -90,7 +86,7 @@ void loop() {
         Serial.printf("[HTTPS] Unable to connect\n");
       }
 
-      // End extra scoping block
+    
     }
   
     delete client;
