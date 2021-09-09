@@ -11,7 +11,7 @@ Make sure you create with phpMyAdmin a new table in your database, for example s
 
 The database table should have the following structure:
 
-| Variable name | Variabletype  | info  		|
+| Variable Name | Variable Type | Additional info  	|
 | ------------- |:-------------:| ---------------------:|
 | id (Primary)  | int(11) 	| AUTO_INCREMENT	|
 | user      	| text      	| latin1_swedish_ci 	|
@@ -21,7 +21,7 @@ The database table should have the following structure:
 | hour   	| time      	|     			|
 		         
 
-I wrote this code getting pieces of code from the official Basic HTTPS client example
-https://github.com/espressif/arduino-esp32/blob/master/libraries/HTTPClient/examples/BasicHttpsClient/BasicHttpsClient.ino
-and from Techtutorials
-https://techtutorialsx.com/2017/05/20/esp32-http-post-requests/
+I wrote this code getting pieces of code from the official [Basic HTTPS client example](https://github.com/espressif/arduino-esp32/blob/master/libraries/HTTPClient/examples/BasicHttpsClient/BasicHttpsClient.ino)
+
+and from [Techtutorials blog](https://techtutorialsx.com/2017/05/20/esp32-http-post-requests/)
+
